@@ -1,5 +1,6 @@
   h1 {
     color: white;
+    font-family: 'Press Start 2P', cursive;
   }
 
   ul {
@@ -21,24 +22,24 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Bangers', cursive;
+    font-family: 'Press Start 2P', cursive;
   }
   
   li a:hover {
     background-color: green;
     color: black;
-    font-family: 'Bangers', cursive;
+    font-family: 'Press Start 2P', cursive;
   }
 
   .ergebnis {
     color: black; 
-    font-family: 'Bangers', cursive;
-    font-size: 64px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100px;
   }
 
   .navbarbutton {
     color: white; 
-    font-family: 'Bangers', cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     background-color: Transparent;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@
 
   .navbarbutton:hover {
     color: darkgray; 
-    font-family: 'Bangers', cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 30px;
   }
 
