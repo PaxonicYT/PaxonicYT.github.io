@@ -4,12 +4,11 @@ function farbe() {
  
     for(i=0;i<2;i++) {
  
-     zufall=parseInt(Math.random()*Farben.length);
-     Ergebnis.push(Farben[zufall]);
+     Ergebnis.push(Farben[1]);
      Farben[zufall]=null;
     }
                          
-    alert(Ergebnis.join(""));
+    document.getElementById('ergebnis')
                  
  }
 
@@ -19,11 +18,10 @@ function farbe() {
  
     for(i=0;i<2;i++) {
  
-     zufall=parseInt(Math.random()*Algen.length);
-     Ergebnis.push(Algen[zufall]);
+     Ergebnis.push(Algen[1]);
      Algen[zufall]=null;
     }
                          
-    alert(Ergebnis.join(""));
+    document.getElementById('ergebnis')
                  
  }
