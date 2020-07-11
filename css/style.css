@@ -41,6 +41,9 @@ body {
   .navbarbutton {
     color: white; 
     font-family: 'Bangers', cursive;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
   }
 
   .navbarbutton:hover {
