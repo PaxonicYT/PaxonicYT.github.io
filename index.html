@@ -3,6 +3,17 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <script src="js/alge.js"></script>
+    <style type="text/css">
+        body, html
+        {
+            margin: 0; padding: 0; height: 100%; overflow: hidden;
+        }
+
+        #content
+        {
+            position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+        }
+    </style>
     <title>Alge Alge Alge - Paxonic</title>
     </head>
     <body>
@@ -11,6 +22,6 @@
             <li><a onclick="iframe_alge();">Alge</a></li>
             <li><a onclick="iframe_about();">About</a></li>
           </ul>
-          <iframe id="iframe" src="farbe.html" title="Farbe"></iframe>
+          <iframe id="iframe" width="100%" height="100%" frameborder="0" src="farbe.html">
     </body>
 </html>
