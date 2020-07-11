@@ -9,7 +9,7 @@ function farbe() {
 
  function alge() {
     var Ergebnis = document.getElementById("ergebnis");
-     Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 5) + 2);
+     Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 4) + 2);
  }
 
  function iframe_farbe(url) {
