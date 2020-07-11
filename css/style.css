@@ -66,14 +66,14 @@
   }
 
   .button1 {
-    background-color: white; 
+    background-color: #4CAF50; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid white;
   }
   
   .button1:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: #4CAF50;
   }
 
   #form {
