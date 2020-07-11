@@ -3,9 +3,7 @@ function farbe() {
     Ergebnis = new Array();
  
     for(i=0;i<2;i++) {
- 
      Ergebnis.push(Farben[1]);
-     Farben[zufall]=null;
     }
                          
     document.getElementById('ergebnis') = Ergebnis;
@@ -17,9 +15,7 @@ function farbe() {
     Ergebnis = new Array();
  
     for(i=0;i<2;i++) {
- 
      Ergebnis.push(Algen[1]);
-     Algen[zufall]=null;
     }
                          
     document.getElementById('ergebnis') = Ergebnis;
