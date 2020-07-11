@@ -1,13 +1,13 @@
 function farbe() {
+    var Ergebnis = document.getElementById("ergebnis");
     var Farben = new Array("Grün","Rot");
-    var Ergebnis = Array(Farben);
-     document.getElementById('ergebnis').innerHTML = Ergebnis;
+    var Farbe = Farben[Math.floor(Math.random() * items.length)];
+     Ergebnis.innerHTML = Farbe;
     }
 
  function alge() {
-    var Algen = new Array("Alge 2","Alge 3","Alge 4","Alge 5");
-    var Ergebnis = Array(Farben);
-     document.getElementById('ergebnis').innerHTML = Ergebnis;
+    var Ergebnis = document.getElementById("ergebnis");
+     Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 5) + 2);
  }
 
  function iframe_farbe(url) {
