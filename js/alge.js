@@ -8,7 +8,7 @@ function farbe() {
      Farben[zufall]=null;
     }
                          
-    document.getElementById('ergebnis').innerHTML = Ergebnis;
+    document.getElementById('ergebnis') = Ergebnis;
                  
  }
 
@@ -22,7 +22,7 @@ function farbe() {
      Algen[zufall]=null;
     }
                          
-    document.getElementById('ergebnis').innerHTML = Ergebnis;
+    document.getElementById('ergebnis') = Ergebnis;
                  
  }
 
