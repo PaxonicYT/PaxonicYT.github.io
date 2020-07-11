@@ -46,7 +46,7 @@
   }
 
   .navbarbutton:hover {
-    color: black; 
+    color: darkgray; 
     font-family: 'Bangers', cursive;
     font-size: 30px;
   }
