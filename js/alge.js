@@ -25,3 +25,15 @@ function farbe() {
     document.getElementById('ergebnis')
                  
  }
+
+ function iframe_farbe(url) {
+    document.getElementById('iframe').src = "farbe.html";
+ }
+
+ function iframe_alge(url) {
+    document.getElementById('iframe').src = "alge.html";
+ }
+
+ function iframe_about(url) {
+    document.getElementById('iframe').src = "about.html";
+ }
