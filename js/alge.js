@@ -1,7 +1,9 @@
 function farbe() {
     var Ergebnis = document.getElementById("ergebnis");
     var Farben = new Array("Grün","Rot");
-    var Farbe = Farben[Math.floor(Math.random() * items.length)];
+    for ( var i = 0; i < length; i++ ) {
+        Farbe += Farben.charAt(Math.floor(Math.random() * Farben.length));
+    }
      Ergebnis.innerHTML = Farbe;
     }
 
