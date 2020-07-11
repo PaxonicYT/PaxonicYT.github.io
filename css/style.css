@@ -38,6 +38,16 @@ body {
     font-family: 'Bangers', cursive;
   }
 
+  .navbarbutton {
+    color: white; 
+    font-family: 'Bangers', cursive;
+  }
+
+  .navbarbutton:hover {
+    color: black; 
+    font-family: 'Bangers', cursive;
+  }
+
   .button {
     background-color: #4CAF50;
     border: none;
@@ -51,7 +61,7 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
-  
+
   .button1 {
     background-color: white; 
     color: black; 
