@@ -52,9 +52,9 @@
   }
 
   .button {
-    background-color: #4CAF50;
+    background-color: white;
     border: none;
-    color: white;
+    color: #4CAF50;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
