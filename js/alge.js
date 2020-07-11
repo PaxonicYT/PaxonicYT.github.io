@@ -1,6 +1,12 @@
 function farbe() {
     var Ergebnis = document.getElementById("ergebnis");
-     Ergebnis.innerHTML = Farben.random("Grün","Rot");
+    var Random = Math.floor((Math.random() * 2) + 1);
+    if(Random == 1) {
+        var Farbe = "Grün"
+    } else if(Random == 2) {
+        var Farbe = "Rot"
+    }
+    Ergebnis.innerHTML = Farbe;
     }
 
  function alge() {
