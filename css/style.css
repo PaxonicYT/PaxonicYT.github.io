@@ -79,8 +79,9 @@
 
   #form {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    background-image: "images/background.png";
+    width: 100%;
+    height: 100%;
     top: 50%;
     left: 50%;
     margin-top: -100px;
