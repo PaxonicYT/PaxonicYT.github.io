@@ -3,6 +3,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    font-family: 'Bangers', cursive;
   }
 
   ul {
@@ -27,4 +28,5 @@ body {
   
   li a:hover {
     background-color: greenyellow;
+    color: black;
   }
