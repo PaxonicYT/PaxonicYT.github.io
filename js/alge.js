@@ -1,7 +1,7 @@
 function farbe() {
     var Ergebnis = document.getElementById("ergebnis");
     var Farben = new Array("Grün","Rot");
-     Ergebnis.innerHTML = Farben.charAt(Math.floor(Math.random() * 2));;
+     Ergebnis.innerHTML = Farben.random;
     }
 
  function alge() {
