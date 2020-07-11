@@ -55,6 +55,7 @@ body {
   .navbarbutton:hover {
     color: black; 
     font-family: 'Bangers', cursive;
+    font-size: medium;
   }
 
   .button {
