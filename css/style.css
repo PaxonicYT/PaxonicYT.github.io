@@ -39,6 +39,7 @@
   .navbarbutton {
     color: white; 
     font-family: 'Bangers', cursive;
+    font-size: 30px;
     background-color: Transparent;
     background-repeat: no-repeat;
     border: none;
@@ -47,7 +48,7 @@
   .navbarbutton:hover {
     color: black; 
     font-family: 'Bangers', cursive;
-    font-size: medium;
+    font-size: 30px;
   }
 
   .button {
