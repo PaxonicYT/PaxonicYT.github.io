@@ -38,6 +38,12 @@ body {
     font-family: 'Bangers', cursive;
   }
 
+  .ergebnis {
+    color: black; 
+    font-family: 'Bangers', cursive;
+    font-size: large;
+  }
+
   .navbarbutton {
     color: white; 
     font-family: 'Bangers', cursive;
