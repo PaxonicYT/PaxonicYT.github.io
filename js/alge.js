@@ -6,12 +6,16 @@ function farbe() {
     } else if(Random == 2) {
         var Farbe = "Rot"
     }
+    var audio = new Audio('assets/AlgeSound.wav');
+    audio.play();
     Ergebnis.innerHTML = Farbe;
     }
 
  function alge() {
     var Ergebnis = document.getElementById("ergebnis");
-     Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 4) + 2);
+    var audio = new Audio('assets/AlgeSound.wav');
+    audio.play();
+    Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 4) + 2);
  }
 
  function iframe_farbe(url) {
