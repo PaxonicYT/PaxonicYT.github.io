@@ -8,6 +8,12 @@
     font-family: 'Press Start 2P', cursive;
   }
 
+  p {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: large;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
