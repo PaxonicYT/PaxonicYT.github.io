@@ -4,7 +4,7 @@ function farbe() {
     if(Random == 1) {
         var Farbe = "Grün"
     } else if(Random == 2) {
-        var Farbe = "Blau"
+        var Farbe = "Rot"
     }
     var audio = new Audio('assets/AlgeSound.wav');
     audio.play();
