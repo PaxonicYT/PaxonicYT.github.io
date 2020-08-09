@@ -86,6 +86,7 @@
   .button1:hover {
     background-color: white;
     color: #d6aa31;
+    border: 2px solid #d6aa31;
   }
 
   #form {
