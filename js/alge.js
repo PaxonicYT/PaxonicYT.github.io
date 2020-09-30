@@ -29,3 +29,7 @@ function farbe() {
  function iframe_about(url) {
     document.getElementById('iframe').src = "about.html";
  }
+
+ function iframe_privacy(url) {
+   document.getElementById('iframe').src = "privacy.html";
+}
