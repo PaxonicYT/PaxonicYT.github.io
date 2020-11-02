@@ -44,8 +44,8 @@ function farbe() {
  }
 
  function iframe_megaalge(url) {
-   document.getElementById('iframe').src = "megaalge.html";
-} 
+    document.getElementById('iframe').src = "megaalge.html";
+ }
 
  function iframe_about(url) {
     document.getElementById('iframe').src = "about.html";
