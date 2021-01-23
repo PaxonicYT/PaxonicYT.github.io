@@ -15,7 +15,7 @@ function farbe() {
     var Ergebnis = document.getElementById("ergebnis");
     var audio = new Audio('assets/AlgeSound.wav');
     audio.play();
-    Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 4) + 2);
+    Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 5) + 2);
  }
 
  function megaalge() {
