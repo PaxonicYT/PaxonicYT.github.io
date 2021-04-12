@@ -6,14 +6,28 @@ function farbe() {
     } else if(Random == 2) {
         var Farbe = "Rot"
     }
-    var audio = new Audio('assets/AlgeSound.wav');
+    var Random = Math.floor((Math.random() * 3) + 1);
+    if(Random == 1) {
+       var audio = new Audio('assets/alge1.wav');
+   } else if(Random == 2) {
+       var audio = new Audio('assets/alge2.wav');
+   } else if(Random == 3) {
+       var audio = new Audio('assets/alge3.wav');
+   }
     audio.play();
     Ergebnis.innerHTML = Farbe;
     }
 
  function alge() {
     var Ergebnis = document.getElementById("ergebnis");
-    var audio = new Audio('assets/AlgeSound.wav');
+    var Random = Math.floor((Math.random() * 3) + 1);
+    if(Random == 1) {
+       var audio = new Audio('assets/alge1.wav');
+   } else if(Random == 2) {
+       var audio = new Audio('assets/alge2.wav');
+   } else if(Random == 3) {
+       var audio = new Audio('assets/alge3.wav');
+   }
     audio.play();
     Ergebnis.innerHTML =  "Alge " + Math.floor((Math.random() * 5) + 2);
  }
@@ -30,8 +44,15 @@ function farbe() {
    } else if(Random == 4) {
        var Farbe = "Gelb"
 }
-   var audio = new Audio('assets/AlgeSound.wav');
-   audio.play();
+   var Random = Math.floor((Math.random() * 3) + 1);
+    if(Random == 1) {
+       var audio = new Audio('assets/alge1.wav');
+   } else if(Random == 2) {
+       var audio = new Audio('assets/alge2.wav');
+   } else if(Random == 3) {
+       var audio = new Audio('assets/alge3.wav');
+   }
+    audio.play();
    Ergebnis.innerHTML = Farbe;
    } 
 
