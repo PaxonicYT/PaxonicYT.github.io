@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Alge-API</title>
+        <meta charset="utf-8">
+        <script>
+            window.addEventListener("load", function() {
+                colours = ["Grün", "Rot", "Gelb", "Blau"]
+                colour = colours[Math.floor(Math.random() * colours.length)];
+                document.getElementById("result").innerHTML = colour;
+            });
+        </script>
+    </head>
+    <body>
+        <pre id="result">Alge wird generiert…</pre>
+    </body>
+</html>
