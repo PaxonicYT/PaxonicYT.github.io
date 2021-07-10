@@ -1,32 +1,48 @@
-<html>
+<html lang="de">
     <head>
-        
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/alge.js"></script>
-    <style type="text/css">
-        iframe, html
-        {
-            margin: 0; padding: 0; height: 100%; overflow: hidden;
-        }
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
+        <link rel="stylesheet" type="text/css" href="css/decoration.css">
+        <link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="icon" href="https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d3/Fire_Coral_JE2_BE1.png">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/alge.js"></script>
+        <script src="js/iframes.js"></script>
+        <script src="js/background.js"></script>
+        <style type="text/css">
+            iframe, html {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
 
-        #content
-        {
-            position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
-        }
-    </style>
-    <title>Alge Alge Alge - Paxonic</title>
+            #content {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
+            }
+        </style>
+        <title>Alge Alge Alge</title>
     </head>
-    <body background="assets/background.png">
-        <ul>
-            <li><a><input width="100%" height="100%" frameborder="0" class="navbarbutton" value="Farbe" type="button" onclick="iframe_farbe();"></a></li>
-            <li><a><input width="100%" height="100%" frameborder="0" class="navbarbutton" value="Alge" type="button" onclick="iframe_alge();"></a></li>
-            <li><a><input width="100%" height="100%" frameborder="0" class="navbarbutton" value="Megaalge" type="button" onclick="iframe_megaalge();"></a></li>
-            <li><a><input width="100%" height="100%" frameborder="0" class="navbarbutton" value="About" type="button" onclick="iframe_about();"></a></li>
-            <li><a><input width="100%" height="100%" frameborder="0" class="navbarbutton" value="Datenschutz" type="button" onclick="iframe_privacy();"></a></li>
-            <li><a href="https://github.com/PaxonicYT/PaxonicYT.github.io"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="32px" width="32px"></a></li>
-          </ul>
-          <iframe id="iframe" scrolling="no" width="100%" height="100%" frameborder="0" src="start.html">
+    <body background="assets/background1.png">
+        <footer style="position:fixed; bottom: 0;">
+            <p>© 2021 PaxonicYT & DwarfDev</p>
+        </footer>
+        <!--  Zeigt den Urheber des Hintergrundbildes an -->
+        <div id="image-source" hidden>
+            <img title="Schließe diesen Dialog" src="assets/close.svg" onclick="hide_image_source_field();" width="32px" height="32px" align="right" position="absolute">
+            <pre title="Die Lizenz des Hintergrundbildes" id="image-license"></pre>
+            <pre title="Der Urheber/Rechtsinhaber des Hintergrundbildes" id="image-author"></pre>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a title="Generiert eine zufällige Farbe (Rot, Grün)"><input class="navbarbutton hover-downscale" value="Farbe" type="button" onclick="iframe_farbe();"></a></li>
+                <li><a title="Generiert eine zufällige Alge (Alge 2 bis Alge 6)"><input class="navbarbutton hover-downscale" value="Alge" type="button" onclick="iframe_alge();"></a></li>
+                <li><a title="Megaalge hat statt den üblichen zwei Farben (Rot, Grün) vier Farben (Rot, Grün, Blau, Gelb)"><input class="navbarbutton hover-downscale" value="Megaalge" type="button" onclick="iframe_megaalge();"></a></li>
+                <li><a title="Über Alge"><input style="cursor: pointer;" class="navbarbutton hover-downscale" value="About" type="button" onclick="iframe_about();"></a></li>
+                <li><a title="Programmierungs-Tools für Alge"><input style="cursor: pointer;" class="navbarbutton hover-downscale" value="Programmierungs-Tools" type="button" onclick="iframe_development();"></a></li>
+                <li><a title="Alge auf GitHub" href="https://github.com/PaxonicYT/PaxonicYT.github.io"><img width="42px" height="42px" class="hover-downscale" src="assets/github.png"></a></li>
+                <li><a title="Ändere den Hintergrund"><img width="42px" height="42px" onclick="change_background();" class="hover-downscale" src="assets/picture.svg"></a></li>
+            </ul>
+        </div>
+        <iframe id="iframe" scrolling="no" width="100%" height="100%" frameborder="0" src="start.html"></iframe>
     </body>
 </html>

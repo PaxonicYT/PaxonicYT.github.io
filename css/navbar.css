@@ -1,0 +1,13 @@
+.navbarbutton {
+  font-size: 30px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: help;
+}
+
+.navbarbutton:hover {
+  color: darkgray;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+}
