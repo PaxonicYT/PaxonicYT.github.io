@@ -1,97 +1,108 @@
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+html {
+    scroll-behavior: smooth
+}
 
-  h1 {
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-  }
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  p {
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-    font-size: large;
-  }
+h1, p, .ergebnis, li a, .navbarbutton, pre {
+  font-family: 'Press Start 2P', cursive;
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    border-radius: 12px;
-  }
+h1, p, .ergebnis, li a, .navbarbutton, pre {
+  color: white;
+}
+
+p {
+  font-size: large;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 12px;
+}
   
-  li {
-    float: left;
-  }
+li {
+  float: left;
+}
   
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Press Start 2P', cursive;
-  }
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
   
-  li a:hover {
-    background-color: green;
-    color: black;
-    font-family: 'Press Start 2P', cursive;
-  }
+li a:hover {
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+}
 
-  .ergebnis {
-    color: white; 
-    font-family: 'Press Start 2P', cursive;
-    font-size: 100px;
-  }
+#log {
+  position: absolute;
+  bottom: 50px;
+  right: 16px;
+  font-size: 18px;
+}
 
-  .navbarbutton {
-    color: white; 
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-  }
+.ergebnis {
+  font-size: 100px;
+}
 
-  .navbarbutton:hover {
-    color: darkgray; 
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
-  }
+.button {
+  background-color: white;
+  border: none;
+  color: #d6aa31;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-  .button {
-    background-color: white;
-    border: none;
-    color: #d6aa31;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
+.button1 {
+  background-color: Transparent;
+  border: 2px solid white;
+  color: white;
+}
 
-  .button1 {
-    background-color: #d6aa31; 
-    color: black; 
-    border: 2px solid white;
-  }
-  
-  .button1:hover {
-    background-color: white;
-    color: #d6aa31;
-    border: 2px solid #d6aa31;
-  }
+#form {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
 
-  #form {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    }
+.bubbles {
+  position: absolute;
+}
+
+#image-source > * {
+  margin-left: 10px
+}
+
+
+#image-source {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  text-align: left;
+  width:270px;
+  margin-left: -135px; /* Die halbe Größe des Elements */
+  background-color: #222;
+  outline: 2.5px solid white;
+}
+
+.blank-text {
+  text-decoration: none;
+  color: white;
+}

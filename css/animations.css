@@ -1,0 +1,41 @@
+.hover-downscale:hover {
+  transform: scale(0.7, 0.7);
+}
+
+.hover-downscale {
+  transition: transform 0.5s;
+}
+
+.downscale {
+  transform: scale(0.7, 0.7);
+  transition: transform 0.5s;
+}
+
+.glow-yellow {
+  -webkit-box-shadow: 10px 10px 99px 6px yellow;
+  box-shadow: 5px 5px 20px 6px yellow;
+  background-color: yellow;
+}
+
+.glow-blue {
+  -webkit-box-shadow: 10px 10px 99px 6px blue;
+  box-shadow: 5px 5px 20px 6px blue;
+  background-color: blue;
+}
+
+.glow-green {
+  -webkit-box-shadow: 10px 10px 99px 6px green;
+  box-shadow: 5px 5px 20px 6px green;
+  background-color: green;
+}
+
+.glow-red {
+  -webkit-box-shadow: 10px 10px 99px 6px red;
+  box-shadow: 5px 5px 20px 6px red;
+  background-color: red;
+}
+
+.hover-glow:hover {
+  -webkit-box-shadow: 10px 10px 99px 6px #ffffff;
+  box-shadow: 5px 5px 20px 6px #ffffff;
+}
