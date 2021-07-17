@@ -21,8 +21,8 @@ image_sources = {
         "author": "Frédéric Ducarme"
     },
     "4": {
-        "license": "Public Domain",
-        "author": "Pseudopanax"
+        "license": "CC BY-SA 4.0",
+        "author": "João D'Andretta"
     },
     "5": {
         "license": "CC BY-SA 4.0",
