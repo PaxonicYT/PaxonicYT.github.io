@@ -87,7 +87,6 @@ function set_source_notice(image) {
 
 
 function change_background() {
-    console.log("background changed")
     if ( document.body.background == "assets/background1.png" ) {
         document.body.background = "assets/background2.png";
         set_source_notice("2")

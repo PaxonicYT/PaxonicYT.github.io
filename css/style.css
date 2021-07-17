@@ -11,7 +11,7 @@ h1, p, .ergebnis, li a, .navbarbutton, pre {
   font-family: 'Press Start 2P', cursive;
 }
 
-h1, p, .ergebnis, li a, .navbarbutton, pre {
+h1, p, .ergebnis, li a, pre {
   color: white;
 }
 
@@ -19,12 +19,11 @@ p {
   font-size: large;
 }
 
-ul {
+#navbar-itemlist {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
   border-radius: 12px;
 }
   
@@ -105,4 +104,10 @@ li a:hover {
 .blank-text {
   text-decoration: none;
   color: white;
+}
+
+#language-changer {
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }

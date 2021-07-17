@@ -34,7 +34,6 @@ function log_activity(type, result) {
 function random_sound() {
     // a little easter egg that has a 1 in 100 chance of being triggered ;)
     if ( Math.floor( Math.random() * 100 ) == 0 ) {
-        console.log("You have found an easter egg! :)")
         var audio = new Audio("assets/alge4.wav");
     }
     else {
