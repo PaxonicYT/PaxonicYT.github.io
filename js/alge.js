@@ -8,21 +8,25 @@ colours_en = {
     "Blau": "blue"
 }
 
+// Current active game mode for shared decoration
+var active_game = null;
 
-function get_log_field() {
-    var log_field = document.getElementById("log")
-    return log_field
+
+function get_log_field(suffix) {
+    return document.getElementById("log-" + suffix)
 }
 
 
-function get_decoration_field() {
-    var decoration_field = document.getElementById("decoration")
-    return decoration_field
+function get_decoration_field(suffix) {
+    if (suffix) {
+        return document.getElementById("decoration-" + suffix)
+    }
+    return document.getElementById("decoration")
 }
 
 
-function log_activity(type, result) {
-    var log_field = get_log_field();
+function log_activity(type, result, suffix) {
+    var log_field = get_log_field(suffix);
     if (log_field.children.length > 14) {
         log_field.removeChild(log_field.children[0]);
     }
@@ -76,25 +80,24 @@ function random_colour() {
 }
 
 
-function get_result_field() {
-    var result_field = document.getElementById("ergebnis")
-    return result_field
+function get_result_field(suffix) {
+    return document.getElementById("ergebnis-" + suffix)
 }
 
 
 function delete_element(element) {
-    element.parentNode.removeChild(bubble);
+    element.parentNode.removeChild(element);
 }
 
 function get_random_position() {
-    var x = Math.floor(Math.random() * 1680) + "px";
-    var y = Math.floor(Math.random() * 850) + "px";
+    var x = Math.floor(Math.random() * window.innerWidth) + "px";
+    var y = Math.floor(Math.random() * (window.innerHeight - 100)) + "px";
     return [x, y]
 }
 
 
-function create_bubble() {
-    var decoration_field = get_decoration_field();
+function create_bubble(suffix) {
+    var decoration_field = get_decoration_field(suffix);
     if ( decoration_field.children.length > 0 ) {
         decoration_field.removeChild(decoration_field.children[0])
     }
@@ -109,42 +112,42 @@ function create_bubble() {
 }
 
 
-function clear_log() {
-    var log_field = get_log_field();
+function clear_log(suffix) {
+    var log_field = get_log_field(suffix);
     log_field.innerHTML = "";
 }
 
 
 function farbe() {
-    var result_field = get_result_field();
+    var result_field = get_result_field("farbe");
     var sound_effect = random_sound();
     var colour = random_colour();
-    set_glow(document.getElementById("Alge"), colour);
+    set_glow(document.getElementById("btn-farbe"), colour);
     set_text_colour(result_field, colours_en[colour]);
     sound_effect.play();
     result_field.innerHTML = colour;
-    log_activity("Farbe", colour);
-    create_bubble();
+    log_activity("Farbe", colour, "farbe");
+    create_bubble("farbe");
 }
 
 function alge() {
-    var result_field = get_result_field();
+    var result_field = get_result_field("alge");
     var sound_effect = random_sound();
     var alge = random_alge();
     sound_effect.play();
     result_field.innerHTML = alge;
-    log_activity("Alge", alge);
-    create_bubble();
+    log_activity("Alge", alge, "alge");
+    create_bubble("alge");
 }
 
 function megaalge() {
-    var result_field = get_result_field();
+    var result_field = get_result_field("megaalge");
     var sound_effect = random_sound();
     var colour = random_megaalge();
     sound_effect.play();
-    set_glow(document.getElementById("Alge"), colour);
+    set_glow(document.getElementById("btn-megaalge"), colour);
     set_text_colour(result_field, colours_en[colour]);
     result_field.innerHTML = colour;
-    log_activity("Megaalge-Farbe", colour);
-    create_bubble();
+    log_activity("Megaalge-Farbe", colour, "megaalge");
+    create_bubble("megaalge");
 }

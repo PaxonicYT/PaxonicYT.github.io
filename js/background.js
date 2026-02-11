@@ -1,3 +1,5 @@
+var currentBackgroundIndex = 1;
+
 links = {
     "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
     "Public Domain": "https://unsplash.com/license",
@@ -87,36 +89,10 @@ function set_source_notice(image) {
 
 
 function change_background() {
-    if ( document.body.background == "assets/background1.png" ) {
-        document.body.background = "assets/background2.png";
-        set_source_notice("2")
+    currentBackgroundIndex++;
+    if (currentBackgroundIndex > 8) {
+        currentBackgroundIndex = 1;
     }
-    else if ( document.body.background == "assets/background2.png" ) {
-        document.body.background = "assets/background3.png";
-        set_source_notice("3")
-    }
-    else if ( document.body.background == "assets/background3.png" ) {
-        document.body.background = "assets/background4.png";
-        set_source_notice("4")
-    }
-    else if ( document.body.background == "assets/background4.png" ) {
-        document.body.background = "assets/background5.png";
-        set_source_notice("5")
-    }
-    else if ( document.body.background == "assets/background5.png" ) {
-        document.body.background = "assets/background6.png";
-        set_source_notice("6")
-    }
-    else if ( document.body.background == "assets/background6.png" ) {
-        document.body.background = "assets/background7.png";
-        set_source_notice("7")
-    }
-    else if ( document.body.background == "assets/background7.png" ) {
-        document.body.background = "assets/background8.png";
-        set_source_notice("8")
-    }
-    else if ( document.body.background == "assets/background8.png" ) {
-        document.body.background = "assets/background1.png";
-        set_source_notice("1")
-    }
+    document.body.style.backgroundImage = "url('assets/background" + currentBackgroundIndex + ".png')";
+    set_source_notice(String(currentBackgroundIndex));
 }

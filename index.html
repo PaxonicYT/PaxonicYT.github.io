@@ -1,52 +1,161 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/animations.css">
-        <link rel="stylesheet" type="text/css" href="css/decoration.css">
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">
-        <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme-css">
-        <link rel="icon" href="assets/logo.svg">
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/alge.js"></script>
-        <script src="js/iframes.js"></script>
-        <script src="js/theme.js"></script>
-        <script src="js/background.js"></script>
-        <style type="text/css">
-            iframe, html {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
-
-            #content {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
-            }
-        </style>
         <title>Alge Alge Alge</title>
+        <link rel="icon" href="assets/logo.svg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/1tMZbeWPFo0lUpBMkGz1HNHlzZfN3Pw" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body background="assets/background1.png">
-        <footer style="position:fixed; bottom: 0;">
-            <p>© 2021 PaxonicYT & DwarfDev</p>
-        </footer>
-        <!--  Zeigt den Urheber des Hintergrundbildes an -->
+    <body style="background-image: url('assets/background1.png');">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo.svg" alt="Alge" width="32" height="32">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link navbarbutton hover-downscale" href="#" title="Generiert eine zufällige Farbe (Rot, Grün)" onclick="navigate_farbe();">Farbe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbarbutton hover-downscale" href="#" title="Generiert eine zufällige Alge (Alge 2 bis Alge 6)" onclick="navigate_alge();">Alge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbarbutton hover-downscale" href="#" title="Megaalge: vier Farben (Rot, Grün, Blau, Gelb)" onclick="navigate_megaalge();">Megaalge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbarbutton hover-downscale" href="#" title="Über Alge" onclick="navigate_about();">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link hover-downscale" href="#" title="Programmierungs-Tools für Alge" onclick="navigate_development();">
+                                <img id="development-tools" width="32" height="32" src="assets/dark/settings.svg" alt="Dev Tools">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-downscale" href="#" title="Ändere den Hintergrund" onclick="change_background();">
+                                <img id="background-changer" width="32" height="32" src="assets/dark/picture.svg" alt="Background">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-downscale" href="#" title="Ändere das Design" onclick="change_theme();">
+                                <img id="theme-changer" width="32" height="32" src="assets/dark/sun.svg" alt="Theme">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-downscale" href="https://github.com/PaxonicYT/PaxonicYT.github.io" title="Alge auf GitHub">
+                                <img id="github-link" width="32" height="32" src="assets/dark/github.png" alt="GitHub">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container-fluid content-wrapper">
+
+            <!-- Start Section -->
+            <div id="section-start" class="content-section text-center">
+                <h1>Wilkommen bei Alge</h1>
+                <p>Bitte wähle einen der oben aufgelisteten Modi aus.</p>
+            </div>
+
+            <!-- Farbe Section -->
+            <div id="section-farbe" class="content-section d-none">
+                <div id="decoration-farbe"></div>
+                <div id="log-farbe" class="activity-log"></div>
+                <div class="game-area text-center">
+                    <h1><output class="ergebnis" id="ergebnis-farbe">Farbe</output></h1>
+                    <input id="btn-farbe" type="button" class="button button1 hover-downscale" value="Alge" onclick="farbe();">
+                </div>
+            </div>
+
+            <!-- Alge Section -->
+            <div id="section-alge" class="content-section d-none">
+                <div id="decoration-alge"></div>
+                <div id="log-alge" class="activity-log"></div>
+                <div class="game-area text-center">
+                    <h1><output class="ergebnis" id="ergebnis-alge">Alge</output></h1>
+                    <input id="btn-alge" type="button" class="button button1 hover-downscale" value="Alge" onclick="alge();">
+                </div>
+            </div>
+
+            <!-- Megaalge Section -->
+            <div id="section-megaalge" class="content-section d-none">
+                <div id="decoration-megaalge"></div>
+                <div id="log-megaalge" class="activity-log"></div>
+                <div class="game-area text-center">
+                    <h1><output class="ergebnis" id="ergebnis-megaalge">Farbe</output></h1>
+                    <input id="btn-megaalge" type="button" class="button button1 hover-downscale" value="Alge" onclick="megaalge();">
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="section-about" class="content-section d-none">
+                <div class="position-relative">
+                    <img class="hover-downscale language-changer-icon" title="Ändere die Sprache dieser Seite" onclick="change_language();" src="assets/german.svg" id="language-changer" width="50" height="50">
+                </div>
+                <h1>Alge</h1>
+                <p class="translatable-content" id="about">
+                    Alge ist ein "Spiel", welches im Twitchstream von GoldenHand auf dem Server GoldenArmy.de gespielt wird.
+                    In dem Spiel geht es darum, dass es 2 Seiten gibt eine Rote und eine Grüne. Vor jeder Runde können die
+                    Spieler sich zwischen diesen Seiten entscheiden. Danach wird Random generiert, welche Farbe weiterkommt.
+                    Die jeweils andere Farbe scheidet aus. Der oder die Gewinner bekommen dann eine Alge zwischen 2 - 5.
+                </p>
+            </div>
+
+            <!-- Development Section -->
+            <div id="section-development" class="content-section d-none">
+                <h1>Programmierungs-Tools</h1>
+                <p>
+                    • Python-API: <a href="https://github.com/DwarflinDeveloping/pyalge" hreflang="en" target="_blank">https://github.com/DwarflinDeveloping/pyalge</a><br>
+                    • Kotlin-API: <a href="https://github.com/DerTev/KAlge" hreflang="en" target="_blank">https://github.com/DerTev/KAlge</a><br>
+                    • JavaScript-API: <a href="https://github.com/DwarflinDeveloping/JSAlge" hreflang="en" target="_blank">https://github.com/DwarflinDeveloping/JSAlge</a>
+                </p>
+                <p>
+                    Bei anderen Programmiersprachen kannst du die offiziellen API-Seiten von Alge nutzen...<br>
+                    • Algen: <a href="https://alge.paxonic.eu/api-alge.html" hreflang="de" target="_blank">https://alge.paxonic.eu/api-alge.html</a><br>
+                    • Farben: <a href="https://alge.paxonic.eu/api-farbe.html" hreflang="de" target="_blank">https://alge.paxonic.eu/api-farbe.html</a><br>
+                    • Megaalge-Farben: <a href="https://alge.paxonic.eu/api-megaalge.html" hreflang="de" target="_blank">https://alge.paxonic.eu/api-megaalge.html</a>
+                </p>
+                <p>
+                    ...oder dir dein eigenes Skript erstellen. Siehe dazu <a href="https://alge.paxonic.eu/js/alge.js" hreflang="en" target="_blank">hier</a>, wie das Spiel aufgebaut ist und versuche es nachzubauen.
+                </p>
+            </div>
+
+        </main>
+
+        <!-- Image Source Attribution -->
         <div id="image-source" hidden>
-            <img title="Schließe diesen Dialog" src="assets/dark/close.svg" onclick="hide_image_source_field();" width="32px" height="32px" align="right" position="absolute">
+            <img title="Schließe diesen Dialog" id="close-source-btn" src="assets/dark/close.svg" onclick="hide_image_source_field();" width="32" height="32" class="close-btn" alt="Close">
             <pre title="Die Lizenz des Hintergrundbildes" id="image-license"></pre>
             <pre title="Der Urheber/Rechtsinhaber des Hintergrundbildes" id="image-author"></pre>
         </div>
-        <div id="navbar">
-            <ul id="navbar-itemlist">
-                <li><a title="Generiert eine zufällige Farbe (Rot, Grün)"><input class="navbarbutton hover-downscale" value="Farbe" type="button" onclick="iframe_farbe();"></a></li>
-                <li><a title="Generiert eine zufällige Alge (Alge 2 bis Alge 6)"><input class="navbarbutton hover-downscale" value="Alge" type="button" onclick="iframe_alge();"></a></li>
-                <li><a title="Megaalge hat statt den üblichen zwei Farben (Rot, Grün) vier Farben (Rot, Grün, Blau, Gelb)"><input class="navbarbutton hover-downscale" value="Megaalge" type="button" onclick="iframe_megaalge();"></a></li>
-                <li><a title="Über Alge"><input style="cursor: pointer;" class="navbarbutton hover-downscale" value="About" type="button" onclick="iframe_about();"></a></li>
-                <li><a title="Programmierungs-Tools für Alge"><img id="development-tools" width="42px" height="42px" onclick="iframe_development();" class="hover-downscale" src="assets/dark/settings.svg"></a></li>
-                <li><a title="Ändere den Hintergrund"><img id="background-changer" width="42px" height="42px" onclick="change_background();" class="hover-downscale" src="assets/dark/picture.svg"></a></li>
-                <li><a title="Ändere das Design der Navbar"><img id="theme-changer" width="42px" height="42px" onclick="change_theme();" class="hover-downscale" src="assets/dark/sun.svg"></a></li>
-                <li><a title="Alge auf GitHub" href="https://github.com/PaxonicYT/PaxonicYT.github.io"><img width="42px" id="github-link" height="42px" class="hover-downscale" src="assets/dark/github.png"></a></li>
-            </ul>
-        </div>
-        <iframe id="iframe" scrolling="no" width="100%" height="100%" frameborder="0" src="start.html"></iframe>
+
+        <!-- Bubble Decoration -->
+        <div id="decoration"></div>
+
+        <!-- Footer -->
+        <footer class="fixed-bottom text-center py-2">
+            <p class="mb-0">&copy; 2021 PaxonicYT &amp; DwarfDev</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/alge.js"></script>
+        <script src="js/navigation.js"></script>
+        <script src="js/theme.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/translate.js"></script>
     </body>
 </html>
