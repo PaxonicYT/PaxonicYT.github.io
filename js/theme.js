@@ -32,7 +32,7 @@ function set_theme_bright() {
     document.getElementById("development-tools").src = "assets/bright/settings.svg";
     document.getElementById("github-link").src = "assets/bright/github.png";
     var closeBtn = document.getElementById("close-source-btn");
-    if (closeBtn) closeBtn.src = "assets/bright/close.svg";
+    if (closeBtn) closeBtn.src = "assets/dark/close.svg";
 }
 
 

@@ -32,6 +32,53 @@
   --navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* ===== Bootstrap Fallback Utilities ===== */
+.d-none {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* ===== Base ===== */
 html {
   scroll-behavior: smooth;
@@ -69,8 +116,120 @@ a {
 #main-navbar {
   background-color: var(--bg-navbar);
   backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
 }
 
+#main-navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  vertical-align: middle;
+}
+
+.navbar-toggler {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--navbar-toggler-border);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: var(--navbar-toggler-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+#navbarContent {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link img {
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  #navbarContent {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbarContent.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+/* ===== Navbar Buttons (game modes) ===== */
 .navbarbutton {
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
@@ -78,20 +237,12 @@ a {
   background: transparent;
   border: none;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 0.5rem 0.75rem;
 }
 
 .navbarbutton:hover {
   opacity: 0.7;
-}
-
-.navbar-toggler {
-  border-color: var(--navbar-toggler-border);
-}
-
-.navbar-toggler-icon {
-  background-image: var(--navbar-toggler-icon);
 }
 
 /* ===== Content Wrapper ===== */
