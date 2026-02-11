@@ -1,8 +1,0 @@
-.bubbles {
-  position: absolute;
-}
-
-.move-top {
-  transition: 3s;
-  margin-top: -100% !important;
-}
